@@ -3,6 +3,7 @@ import 'dart:io';
 void main() {
   List<String> notas = <String>[];
   menu(notas);
+  
 }
 
 String getComando() {
@@ -46,7 +47,11 @@ void listarNotas(List<String> notas) {
 }
 
 void menu(List<String> notas) {
+  print("");
+  cabecalho();
+  print("");
   var comando = getComando();
+  print("");
 
   switch (comando) {
     case "1":
@@ -61,4 +66,15 @@ void menu(List<String> notas) {
       print("...");
       break;
   }
+}
+
+void cabecalho() {
+  print(r'''
+.______    __        ______     ______   ______       _______   _______    .__   __.   ______   .___________.    ___           _______.
+|   _  \  |  |      /  __  \   /      | /  __  \     |       \ |   ____|   |  \ |  |  /  __  \  |           |   /   \         /       |
+|  |_)  | |  |     |  |  |  | |  ,----'|  |  |  |    |  .--.  ||  |__      |   \|  | |  |  |  | `---|  |----`  /  ^  \       |   (----`
+|   _  <  |  |     |  |  |  | |  |     |  |  |  |    |  |  |  ||   __|     |  . `  | |  |  |  |     |  |      /  /_\  \       \   \    
+|  |_)  | |  `----.|  `--'  | |  `----.|  `--'  |    |  '--'  ||  |____    |  |\   | |  `--'  |     |  |     /  _____  \  .----)   |   
+|______/  |_______| \______/   \______| \______/     |_______/ |_______|   |__| \__|  \______/      |__|    /__/     \__\ |_______/ 
+''');
 }
